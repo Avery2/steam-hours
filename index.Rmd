@@ -15,21 +15,51 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(reticulate)
 theme_set(theme_bw())
 data <- read_csv("steam_games.csv")
 ```
 
 ```{r}
-data <- data %>% 
+data <- data %>%
   arrange(desc(hours))
 
 data
 
 min <- sum(data$hours) * .01
 
-data %>% 
-  filter(hours > min) %>% 
-  ggplot(aes(y=reorder(name, hours),x=hours, fill=name)) +
+data %>%
+  filter(hours > min) %>%
+  ggplot(aes(
+    y = reorder(name, hours),
+    x = hours,
+    fill = name
+  )) +
   geom_col()
 ```
+
+```{r}
+py_install("requests")
+py_install("pandas")
+# py_run_string("print(\"hello world\")")
+# foo = "import requests
+# import json
+# import csv
+# import pandas as pd"
+# py_run_string(foo)
+py_run_file("api_req.py")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 

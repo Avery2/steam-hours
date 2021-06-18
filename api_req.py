@@ -36,7 +36,7 @@ for g in game_list:
     # print(f"id: {g['appid']}, name: {g['name']}")
     if g['appid'] in appids:
         # print(f"id: {g['appid']}, name: {g['name']}")
-        idx = [x for x,y in enumerate(games) if y[0] == g['appid']][0]
+        idx = [x for x, y in enumerate(games) if y[0] == g['appid']][0]
         # print(idx)
         games[idx].append(g['name'])
 
