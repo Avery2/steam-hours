@@ -3,6 +3,8 @@ Analyzing data pulled from steam API to see how many hours I've played.
 
 Use python to do API requests and output a csv file. Read csv with the Rmd file to do analysis. Output to gh-pages.
 
+Go to your steam profile and copy the number in the url. Replace the `steamid` variable in the python file to fetch your information.
+
 ## Links
 
 * https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_.28v0001.29
