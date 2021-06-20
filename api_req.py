@@ -3,7 +3,14 @@ import json
 import csv
 import pandas as pd
 
-request_url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=67C30AF59C099700EF17170E1F86CB95&steamid=76561198220639648&format=json"
+# request_url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=67C30AF59C099700EF17170E1F86CB95&steamid=76561198220639648&format=json"
+# MINE 76561198220639648
+steamid = 76561198220639648
+# 76561198313053745
+request_url = f"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=67C30AF59C099700EF17170E1F86CB95&steamid={steamid}&format=json"
+
+# CODY UM 76561198176571502
+# CODY 76561198845725339
 
 r = requests.get(request_url)
 
